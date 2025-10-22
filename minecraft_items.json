@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "nome": "Terra",
+    "tipo": "Blocco",
+    "rarità": "Comune",
+    "ottenibile_da": "Scavare mano",
+    "utilizzo": "Costruire, Coltivare"
+  },
+  {
+    "id": 2,
+    "nome": "Pietra",
+    "tipo": "Blocco",
+    "rarità": "Comune",
+    "ottenibile_da": "Piccone",
+    "utilizzo": "Costruire, Utensili"
+  },
+  {
+    "id": 3,
+    "nome": "Legno Quercia",
+    "tipo": "Blocco",
+    "rarità": "Comune",
+    "ottenibile_da": "Albero",
+    "utilizzo": "Assi, Utensili"
+  },
+  {
+    "id": 4,
+    "nome": "Carbone",
+    "tipo": "Minerale",
+    "rarità": "Comune",
+    "ottenibile_da": "Miniera",
+    "utilizzo": "Combustibile, Torce"
+  },
+  {
+    "id": 5,
+    "nome": "Ferro Grezzo",
+    "tipo": "Minerale",
+    "rarità": "Comune",
+    "ottenibile_da": "Miniera",
+    "utilizzo": "Utensili, Armature"
+  },
+  {
+    "id": 6,
+    "nome": "Oro Grezzo",
+    "tipo": "Minerale",
+    "rarità": "Non Comune",
+    "ottenibile_da": "Miniera",
+    "utilizzo": "Utensili, Blocchi"
+  },
+  {
+    "id": 7,
+    "nome": "Diamante",
+    "tipo": "Minerale",
+    "rarità": "Rara",
+    "ottenibile_da": "Miniera",
+    "utilizzo": "Utensili, Armature"
+  },
+  {
+    "id": 8,
+    "nome": "Smeraldo",
+    "tipo": "Minerale",
+    "rarità": "Rara",
+    "ottenibile_da": "Villager, Miniera",
+    "utilizzo": "Scambio Villager"
+  },
+  {
+    "id": 9,
+    "nome": "Lapislazzuli",
+    "tipo": "Minerale",
+    "rarità": "Non Comune",
+    "ottenibile_da": "Miniera",
+    "utilizzo": "Colorante, Incantamento"
+  },
+  {
+    "id": 10,
+    "nome": "Redstone",
+    "tipo": "Minerale",
+    "rarità": "Non Comune",
+    "ottenibile_da": "Miniera",
+    "utilizzo": "Circuiti, Automazione"
+  },
+  {
+    "id": 11,
+    "nome": "Sabbia",
+    "tipo": "Blocco",
+    "rarità": "Comune",
+    "ottenibile_da": "Spiaggia, Deserto",
+    "utilizzo": "Vetro, Arenaria"
+  },
+  {
+    "id": 12,
+    "nome": "Ghiaia",
+    "tipo": "Blocco",
+    "rarità": "Comune",
+    "ottenibile_da": "Fiumi, Caverne",
+    "utilizzo": "Selce, Cemento"
+  },
+  {
+    "id": 13,
+    "nome": "Acqua",
+    "tipo": "Liquido",
+    "rarità": "Comune",
+    "ottenibile_da": "Secchio, Fiume",
+    "utilizzo": "Coltivazione, Spostamento"
+  },
+  {
+    "id": 14,
+    "nome": "Lava",
+    "tipo": "Liquido",
+    "rarità": "Non Comune",
+    "ottenibile_da": "Secchio, Caverna",
+    "utilizzo": "Combustibile, Ossidiana"
+  },
+  {
+    "id": 15,
+    "nome": "Ossidiana",
+    "tipo": "Blocco",
+    "rarità": "Rara",
+    "ottenibile_da": "Acqua+Lava",
+    "utilizzo": "Portali, Incantamenti"
+  },
+  {
+    "id": 16,
+    "nome": "Terra Arata",
+    "tipo": "Blocco",
+    "rarità": "Comune",
+    "ottenibile_da": "Zappa",
+    "utilizzo": "Coltivare Cibo"
+  },
+  {
+    "id": 17,
+    "nome": "Fornaia",
+    "tipo": "Blocco",
+    "rarità": "Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Cucinare, Fondere"
+  },
+  {
+    "id": 18,
+    "nome": "Tavolo Lavoro",
+    "tipo": "Blocco",
+    "rarità": "Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Creare Oggetti"
+  },
+  {
+    "id": 19,
+    "nome": "Torcia",
+    "tipo": "Blocco",
+    "rarità": "Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Illuminazione"
+  },
+  {
+    "id": 20,
+    "nome": "Letto",
+    "tipo": "Blocco",
+    "rarità": "Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Dormire, Respawn"
+  },
+  {
+    "id": 21,
+    "nome": "Cassa",
+    "tipo": "Blocco",
+    "rarità": "Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Stoccaggio"
+  },
+  {
+    "id": 22,
+    "nome": "Cassa Ender",
+    "tipo": "Blocco",
+    "rarità": "Rara",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Stoccaggio Condiviso"
+  },
+  {
+    "id": 23,
+    "nome": "Tramoggia",
+    "tipo": "Blocco",
+    "rarità": "Non Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Trasferimento Oggetti"
+  },
+  {
+    "id": 24,
+    "nome": "Pistone",
+    "tipo": "Blocco",
+    "rarità": "Non Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Spostare Blocchi"
+  },
+  {
+    "id": 25,
+    "nome": "Pistone Appiccicoso",
+    "tipo": "Blocco",
+    "rarità": "Non Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Spostare, Ritrarre"
+  },
+  {
+    "id": 26,
+    "nome": "Ripetitore Redstone",
+    "tipo": "Blocco",
+    "rarità": "Non Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Ritardo, Amplifica"
+  },
+  {
+    "id": 27,
+    "nome": "Comparatore Redstone",
+    "tipo": "Blocco",
+    "rarità": "Non Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Compara, Misura"
+  },
+  {
+    "id": 28,
+    "nome": "Blocco Musica",
+    "tipo": "Blocco",
+    "rarità": "Non Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Creare Suoni"
+  },
+  {
+    "id": 29,
+    "nome": "Distributore",
+    "tipo": "Blocco",
+    "rarità": "Non Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Lanciare Oggetti"
+  },
+  {
+    "id": 30,
+    "nome": "Gocciolatore",
+    "tipo": "Blocco",
+    "rarità": "Non Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Lasciare Cadere"
+  },
+  {
+    "id": 31,
+    "nome": "Pala Legno",
+    "tipo": "Utensile",
+    "rarità": "Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Scavare Terra"
+  },
+  {
+    "id": 32,
+    "nome": "Piccone Legno",
+    "tipo": "Utensile",
+    "rarità": "Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Minare Pietra"
+  },
+  {
+    "id": 33,
+    "nome": "Ascia Legno",
+    "tipo": "Utensile",
+    "rarità": "Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Tagliare Legno"
+  },
+  {
+    "id": 34,
+    "nome": "Zappa Legno",
+    "tipo": "Utensile",
+    "rarità": "Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Arare Terra"
+  },
+  {
+    "id": 35,
+    "nome": "Spada Legno",
+    "tipo": "Utensile",
+    "rarità": "Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Combattimento"
+  },
+  {
+    "id": 36,
+    "nome": "Pala Pietra",
+    "tipo": "Utensile",
+    "rarità": "Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Scavare Terra"
+  },
+  {
+    "id": 37,
+    "nome": "Piccone Pietra",
+    "tipo": "Utensile",
+    "rarità": "Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Minare Pietra"
+  },
+  {
+    "id": 38,
+    "nome": "Ascia Pietra",
+    "tipo": "Utensile",
+    "rarità": "Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Tagliare Legno"
+  },
+  {
+    "id": 39,
+    "nome": "Zappa Pietra",
+    "tipo": "Utensile",
+    "rarità": "Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Arare Terra"
+  },
+  {
+    "id": 40,
+    "nome": "Spada Pietra",
+    "tipo": "Utensile",
+    "rarità": "Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Combattimento"
+  },
+  {
+    "id": 41,
+    "nome": "Pala Ferro",
+    "tipo": "Utensile",
+    "rarità": "Non Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Scavare"
+  },
+  {
+    "id": 42,
+    "nome": "Piccone Ferro",
+    "tipo": "Utensile",
+    "rarità": "Non Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Minare Minerali"
+  },
+  {
+    "id": 43,
+    "nome": "Ascia Ferro",
+    "tipo": "Utensile",
+    "rarità": "Non Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Tagliare Legno"
+  },
+  {
+    "id": 44,
+    "nome": "Zappa Ferro",
+    "tipo": "Utensile",
+    "rarità": "Non Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Arare Terra"
+  },
+  {
+    "id": 45,
+    "nome": "Spada Ferro",
+    "tipo": "Utensile",
+    "rarità": "Non Comune",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Combattimento"
+  },
+  {
+    "id": 46,
+    "nome": "Pala Diamante",
+    "tipo": "Utensile",
+    "rarità": "Rara",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Scavare"
+  },
+  {
+    "id": 47,
+    "nome": "Piccone Diamante",
+    "tipo": "Utensile",
+    "rarità": "Rara",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Minare Blocchi"
+  },
+  {
+    "id": 48,
+    "nome": "Ascia Diamante",
+    "tipo": "Utensile",
+    "rarità": "Rara",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Tagliare Legno"
+  },
+  {
+    "id": 49,
+    "nome": "Zappa Diamante",
+    "tipo": "Utensile",
+    "rarità": "Rara",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Arare Terra"
+  },
+  {
+    "id": 50,
+    "nome": "Spada Diamante",
+    "tipo": "Utensile",
+    "rarità": "Rara",
+    "ottenibile_da": "Crafting",
+    "utilizzo": "Combattimento"
+  }
+]

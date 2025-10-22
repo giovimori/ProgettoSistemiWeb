@@ -1,0 +1,437 @@
+/*=== ==== ===*/
+/*=== ROOT ===*/
+/*=== ==== ===*/
+:root {
+    /* Typography */
+    --fontFamilyBase: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --fontSizeBase: 15px;
+    --LineHeightBase: 1.5;
+
+    /* Color LIGHT */
+    --color-primary: #37A3D2;
+    --color-secondary: #59c8ff;
+    --color-background: #FFF;
+    --color-background-p: #FAF9F9;
+    --color-text: #131B23;
+
+    /* Color DARK */
+    --dark-color-primary: #1c4052;
+    --dark-color-secondary: #122a34;
+    --dark-color-background: #131B23;
+    --dark-color-background-p: #121e26;
+    --dark-color-text: #FAF9F9;
+    --dark-color-link: #88a3E8;
+
+    /* Color others */
+    --color-accent: #F45B69;
+    --color-hover: #28789A;
+    --color-transparent: rgba(0, 0, 0, 0);
+
+    /* Layout - MediaQuery */
+    --desktop-max-width: 1600px;
+}
+
+/*=== ====== ===*/
+/*=== LAYOUT ===*/
+/*=== ====== ===*/
+
+/* Reminder: mobile first; desktop width-min: 768px */
+html {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    padding-top: 100px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header fisso */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 999;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    padding: 5px 0 0 0;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.container {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+main,
+aside {
+    margin: 10px 1%;
+    padding: 1%;
+    border-radius: 25px;
+}
+
+footer {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > p {
+    text-align: center;
+    margin: 5px;
+}
+
+img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+#darkModeToggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 25px 25px;
+    border: 0;
+    background-color: var(--color-transparent);
+}
+
+/*=== TABLE ===*/
+
+table {
+    width: 100%;
+}
+
+table,
+th,
+td {
+    vertical-align: middle;
+    border-collapse: collapse;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid;
+}
+
+th {
+    height: 50px;
+    background-color: var(--color-primary);
+}
+
+body.dark-mode th {
+    background-color: var(--dark-color-primary);
+}
+
+/*=== FORM ===*/
+
+.Tabella ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border: 1px solid;
+}
+
+.Tabella ul li {
+    padding: 16px;
+    border-bottom: 1px solid;
+    line-height: 24px;
+}
+
+.Tabella ul li label,
+.Tabella ul li input[type="text"] {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.Tabella ul li label {
+    width: 80px;
+    margin-right: 10px;
+    text-align: right;
+}
+
+.Tabella ul li input[type="text"] {
+    padding: 8px 10px;
+    border: 1px solid;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+/*=== BUTTON ===*/
+
+button {
+    padding: 10px;
+    margin-left: 5px;
+    border: 1px solid var(--color-primary);
+    border-radius: 20px;
+    min-width: 72px;
+    background-color: var(--color-secondary);
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+}
+
+button:hover {
+    background-color: var(--color-primary);
+}
+
+body.dark-mode button {
+    border-color: var(--dark-color-primary);
+    background-color: var(--dark-color-secondary);
+    color: var(--dark-color-text);
+}
+
+body.dark-mode button:hover {
+    background-color: var(--dark-color-primary);
+}
+
+/*=== TYPOGRAPHY ===*/
+html,
+body {
+    font-family: var(--fontFamilyBase);
+    font-size: var(--fontSizeBase);
+    line-height: var(--LineHeightBase);
+}
+
+footer {
+    line-height: var(--LineHeightBase);
+    font-weight: bold;
+}
+
+footer > p > a {
+    font-weight: 100;
+}
+
+/*=== COLOURS ===*/
+
+main,
+aside {
+    color: var(--color-text);
+    background-color: var(--color-background-p);
+}
+
+header.fixed-header,
+footer,
+.overlay {
+    color: var(--color-text);
+    background-image: linear-gradient(
+        var(--color-secondary) 0%,
+        var(--color-primary) 25%,
+        var(--color-primary) 75%,
+        var(--color-secondary) 100%
+    );
+}
+
+.overlay a {
+    color: var(--dark-color-text);
+}
+
+/*=== DARK MODE ===*/
+
+body.dark-mode {
+    background-color: var(--dark-color-background);
+    color: var(--dark-color-text);
+}
+
+body.dark-mode main,
+body.dark-mode aside {
+    background-color: var(--dark-color-background-p);
+    color: var(--dark-color-text);
+}
+
+body.dark-mode .fixed-header,
+body.dark-mode footer,
+body.dark-mode .overlay {
+    color: var(--dark-color-text);
+    background-image: linear-gradient(
+        to right,
+        var(--dark-color-secondary) 0%,
+        var(--dark-color-primary) 25%,
+        var(--dark-color-primary) 75%,
+        var(--dark-color-secondary) 100%
+    );
+}
+
+body.dark-mode a {
+    color: var(--dark-color-link);
+}
+
+body.dark-mode .overlay a {
+    color: var(--dark-color-text);
+}
+
+body.dark-mode .hamburger {
+    color: var(--dark-color-text);
+}
+
+body.dark-mode input[type="text"] {
+    background-color: var(--dark-color-background);
+    color: var(--dark-color-text);
+}
+
+/*=== COMPONENTS ===*/
+
+/* darkmode button */
+.darkmode {
+    position: absolute;
+    top: 25px;    /* Allineato con .hamburger */
+    right: 16px;
+}
+
+/* Menu fisso (hamburger) */
+.hamburger {
+    position: absolute;
+    top: 25px;
+    left: 16px;
+    font-size: 30px;
+    cursor: pointer;
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+
+/* Menù a scomparsa */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    padding-top: 80px; /* Lascia spazio per la X */
+    width: 100%;
+    text-align: center;
+}
+
+.overlay a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+}
+
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+    line-height: 1;
+}
+
+/*=== HOVER ===*/
+
+.overlay a:hover {
+    background-color: var(--color-hover);
+    color: white;
+    border-radius: 8px;
+}
+
+body.dark-mode .overlay a:hover {
+    background-color: var(--color-hover);
+    color: white;
+}
+
+/* Link attivo nel menu */
+.overlay-content .router-link-exact-active {
+    background-color: var(--color-hover);
+    color: white;
+    border-radius: 10px;
+}
+
+/*=== ACCESSIBILITÀ ===*/
+a:active,
+button:active,
+input:active {
+    font-weight: bold;
+    outline: none;
+    box-shadow: none;
+}
+
+/*=== MEDIA QUERIES ===*/
+
+/* Mobile first, regole sotto applicate solo a desktop */
+@media screen and (min-width: 768px) {
+
+    .container {
+        flex-direction: row;
+        max-width: var(--desktop-max-width);
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    main {
+        flex: 3;
+    }
+
+    aside {
+        flex: 1;
+        order: 2;
+        height: auto;
+        margin-left: 2%;
+    }
+
+    /* .overlay (finestra nav) laterale sx */
+    .overlay {
+        max-width: 300px;
+        box-shadow: 4px 0 16px 0 rgba(0, 0, 0, 0.15);
+        background-image: linear-gradient(
+            to right,
+            var(--color-primary) 0%,
+            var(--color-secondary) 90%
+        );
+    }
+
+    .overlay-content {
+        text-align: left;
+        padding-left: 20px;
+        top: 50px;
+    }
+
+    body.dark-mode .overlay {
+        background-image: linear-gradient(
+            to right,
+            var(--dark-color-primary) 0%,
+            var(--dark-color-secondary) 90%
+        );
+    }
+}
+/*=== FINE MEDIA QUERIES ===*/

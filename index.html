@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Web Socket</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="app">
+        <header class="fixed-header">
+            <div class="header-container">
+                <span class="hamburger" onclick="openNav()">&#9776;</span>
+                <router-link to="/">
+                    <img src="img/logo1.png" alt="Logo" width="115" height="80" id="siteLogo">
+                </router-link>
+
+                <!-- Menu a scomparsa -->
+                <div id="myNav" class="overlay" role="navigation">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" role="button">&times;</a>
+                    <div class="overlay-content">
+                        <router-link to="/">Home</router-link>
+                        <router-link to="/connections">Connections</router-link>
+                        <router-link to="/JSON">JSON</router-link>
+                        <router-link to="/Tabella">Tabella</router-link>
+                    </div>
+                </div>
+
+                <span class="darkmode">
+                    <button id="darkModeToggle">
+                        <img src="img/moon_dark.png" alt="DarkModeSwitch" width="25" height="25" id="darkModeIcon">
+                    </button>
+                </span>
+            </div>
+        </header>
+        <div class="container">
+            <main>
+                <router-view></router-view>
+            </main>
+
+            <aside id="pageAside">
+                <section>
+                    <h3>Visita altri nostri Approndimenti:</h3>
+                    <ul>
+                        <li><a href="#">HTTP: Storia e Funzionamento</a></li>
+                        <li><a href="#">Internet e IP</a></li>
+                        <li><a href="#">WebServer: Tutto quello da Sapere</a></li>
+                    </ul>
+                </section>
+            </aside>
+        </div>
+        <footer>
+            <p>Morelli Giovanni <a
+                    href="mailto:giovanni.morelli8@studio.unibo.it"><br>giovanni.morelli8@studio.unibo.it</a></p>
+            <p>Crescentini Jonathan <a
+                    href="mailto:jonathan.crescentini@studio.unibo.it"><br>jonathan.crescentini@studio.unibo.it</a></p>
+            <p>A.A. 2024-2025</p>
+            <p><a href="https://corsi.unibo.it/laurea/TecnologieSistemiInformatici">CdL Tecnologie Dei Sistemi
+                    Informatici</a></p>
+
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/vue-router@4"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="websocket.js"></script>
+
+</body>
+
+</html>
+
+<div class="Tabella"></div>

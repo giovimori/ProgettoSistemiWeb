@@ -1,128 +1,54 @@
-Campi di sviluppo principale:
-Giovanni: HTML, JS, VueJS
-Jonathan: CSS, Mockup, HTML
- 
-SPECIFICHE GENERALI
-Sito similwiki, in design minimale per facilitare la lettura dell’utente finale.
-Il progetto si basa su una SPA (single page application) sviluppata con vue.js.
-Usa Vue Router per la navigazione tra le pagine rimuovendo la necessità di ricaricare il sito.
- 
-ROUTE
-Dichiarate le routes (const routeName) per permettere di accedere ad ogni componente tramite URL dedicato.
-I componenti sono montati dinamicamente tramite HTML tag: <router-view />, ciò rimuove la necessità di dover ricaricare la pagina.
- 
-DARK MODE
-Implementata dark-mode attivabile tramite bottone in HTML <button id="darkModeToggle"> segnalato sulla pagina da relativa icona cliccabile.
-Tramite JS, quando il bottone viene cliccato, viene aggiunta o rimossa la classe dark-mode al <body>, cambiando, oltre alla palette di colori, anche l’icona del bottone stesso e il logo del sito.
-Definito un insieme di regole CSS contenente lo stile per la dark-mode (selettori “body.dark-mode” e simili).
- 
-MENU DI NAVIGAZIONE A TENDINA
-Implementato tramite una combinazione di HTML, CSS e JavaScript.
- 
-HTML:
-Struttura del menù all’interno di <header>. Premere la hamburger icon (<span class="hamburger" ...>) per aprire il menu chiamando la funzione JS openNav().
-Il menu vero e proprio è il <div id="myNav" class="overlay">, che contiene i link di navigazione <a>
-Il bottone con classe .closebtn chiude il menu chiamando la funzione closeNav().
- 
-CSS:
-Nel CSS il menu è chiuso di default tramite width:0
-Per aprirlo, JS imposta la width.
- 
-JS:
-openNav(): imposta la larghezza del menu a 300px su desktop (overlay su lato sinistro) o 100% su mobile (overlay full-screen).
-closeNav(): riporta la larghezza a 0%, nascondendo il menu.
-Inoltre, in fondo al file JS c’è un comando che chiude automaticamente il menu quando viene cliccata un link al suo interno.
-
- 
- 
-DESIGN CSS
-Design mobile first, layout desktop si attiva a finestra larghezza: 768px.
-Usato Flexbox per il layout della pagina.
-Rispettato contrasto 7:1 nella scelta dei colori.
-Sezione di root in cima al codice per una più veloce modifica e correzione dei parametri di stile della pagina durante lo sviluppo.
-Codice diviso in sezioni tematiche per facilitare lo sviluppo e la modifica.
-Implementata reattività ai click per accessibilità.
-Layout Mobile con componenti impilati.
-Layout Desktop con Aside a lato e larghezza massima del corpo a 1600px.
- 
- 
-DATI IN JSON
-i dati in json sono contenuti in un file esterno, quando si visita la pagina JSON viene fatto il mount() e viene chiamata la funzione GetData(); GetData() usa Axios per fare una richiesta HTTP GET al file minecraft_items.json.
-Quando la risposta arriva, i dati JSON vengono salvati nella variabile minecraftItems.
-La tabella HTML nel template usa v-for per ciclare su ogni elemento dell’array minecraftItems e mostrare i dati riga per riga.
-(In sintesi: I dati JSON vengono caricati dinamicamente tramite Axios, salvati nello stato del componente Vue, e visualizzati in una tabella HTML usando il binding reattivo di Vue (v-for))
-
-TABELLA (CRUD)
-Visualizzazione dei dati: Nel componente Tabella (in websocket.js), i dati delle persone sono dichiarati tramite un array all’interno di const Tabella
-La tabella HTML mostra questi dati usando v-for:
- 
-Aggiunta di una persona
- 
-Cliccando su "Aggiungi Persona" si apre un form:
-<button type="button" @click="
- mostraFormAggiungi = !mostraFormAggiungi;
- if(mostraFormAggiungi) mostraFormModifica = false;">
- {{ mostraFormAggiungi ? 'Chiudi' : 'Aggiungi Persona' }}
-</button>
- 
-Il form di aggiunta:
-<div v-if="mostraFormAggiungi" class="aggiungi-form">
- <form @submit.prevent="aggiungiPersona">
-   <input type="text" v-model="nome" required />
-   <input type="text" v-model="cognome" required/>
-   <button type="submit">Aggiungi</button>
- </form>
-</div>
- 
-Il metodo associato:
-aggiungiPersona() {
- if (this.nome.trim() && this.cognome.trim()) {
-   this.persone.push({ nome: this.nome, cognome: this.cognome });
-   this.nome = "";
-   this.cognome = "";
-   this.mostraFormAggiungi = false;
- }
-}
-
- 
-Modifica di una persona
- 
-Ogni riga ha il pulsante "Modifica", che apre il form di modifica precompilato:
-<div v-if="mostraFormModifica" class="modifica-form">
- <form @submit.prevent="salvaModificaPersona">
-   <input type="text" v-model="modificaNome" required />
-   <input type="text" v-model="modificaCognome" required/>
-   <button type="submit">Salva</button>
-   <button type="button" @click="mostraFormModifica = false">Annulla</button>
- </form>
-</div>
- 
-Metodi associati:
-apriFormModifica(index) {
- this.indiceModifica = index;
- this.modificaNome = this.persone[index].nome;
- this.modificaCognome = this.persone[index].cognome;
- this.mostraFormModifica = true;
- this.mostraFormAggiungi = false;
-},
-salvaModificaPersona() {
- if (this.modificaNome.trim() && this.modificaCognome.trim() && this.indiceModifica !== null) {
-   this.persone[this.indiceModifica].nome = this.modificaNome;
-   this.persone[this.indiceModifica].cognome = this.modificaCognome;
-   this.mostraFormModifica = false;
-   this.indiceModifica = null;
- }
-}
- 
- 
-Eliminazione di una persona
-Come per modifica, ogni riga ha il proprio bottone elimina collegato direttamente alla persona .
- 
-Metodo associato:
-eliminaPersona(index) {
- this.persone.splice(index, 1);
- if (this.indiceModifica === index) {
-   this.mostraFormModifica = false;
- }
-}
- 
+# WebSocket Wiki & Vue Lab
+
+Progetto accademico dedicato all'analisi del protocollo WebSocket, realizzato come Single Page Application (SPA).
+
+L'obiettivo del software è fornire una piattaforma documentale interattiva che illustri le specifiche tecniche del protocollo WebSocket, dimostrando al contempo l'efficacia del framework Vue.js in configurazione "No-Build" per lo sviluppo di interfacce reattive e moderne.
+
+## Panoramica del Progetto
+
+L'applicazione è concepita come una Wiki interattiva che sfrutta il rendering lato client per garantire una navigazione fluida e istantanea, eliminando i tempi di ricaricamento tipici delle architetture web tradizionali.
+
+### Caratteristiche Tecniche
+
+* **Architettura SPA:** Gestione avanzata del routing tramite **Vue Router**, con caricamento dinamico dei componenti e sincronizzazione dell'URL.
+* **Gestione Dinamica del Tema (Dark Mode):** Sistema di tematizzazione centralizzato che modifica programmaticamente le variabili CSS e gli asset grafici per supportare la modalità scura.
+* **Data Fetching asincrono:** Integrazione con la libreria **Axios** per il recupero di dataset esterni in formato JSON, con gestione del ciclo di vita dei dati nei componenti Vue.
+* **Interfaccia CRUD (In-Memory):** Implementazione di un modulo gestionale per record di dati che sfrutta il two-way data binding di Vue per operazioni di creazione, lettura, aggiornamento ed eliminazione in tempo reale.
+* **Mobile-First Design:** Interfaccia adattiva ottimizzata per diverse risoluzioni, dotata di un sistema di navigazione overlay (hamburger menu) gestito via JavaScript.
+
+## Stack Tecnologico
+
+Il progetto è sviluppato esclusivamente con tecnologie web standard e librerie caricate tramite CDN, dimostrando un approccio leggero e privo di dipendenze da complessi sistemi di build.
+
+* **Linguaggi:** HTML5, CSS3, JavaScript (ES6+).
+* **Framework:** Vue.js 3 (Options API).
+* **Routing:** Vue Router 4.
+* **HTTP Client:** Axios.
+
+## Installazione e Utilizzo
+
+L'architettura "No-Build" del progetto permette un'esecuzione immediata senza necessità di installare dipendenze tramite Node.js.
+
+1.  **Clonazione del repository:**
+    ```bash
+    git clone [https://github.com/giovimori/ProgettoSistemiWeb.git](https://github.com/giovimori/ProgettoSistemiWeb.git)
+    ```
+
+2.  **Esecuzione dell'applicazione:**
+    * Aprire il file `index.html` in un browser web.
+    * **Nota Tecnica:** Per garantire il corretto funzionamento delle richieste HTTP locali (Axios), è consigliato l'utilizzo di un server di sviluppo locale (es. Apache) per evitare restrizioni di sicurezza legate alle policy CORS.
+
+## Struttura della Repository
+
+* `index.html`: Entry point dell'applicazione con definizione del layout strutturale e dei collegamenti alle librerie esterne.
+* `websocket.js`: Logica applicativa core, inclusa la configurazione del router, i template dei componenti e la gestione dello stato reattivo.
+* `style.css`: Architettura CSS con variabili di stile per la Dark Mode e media queries per il responsive design.
+* `minecraft_items.json`: Dataset strutturato utilizzato per le dimostrazioni di data fetching.
+
+## Autori
+
+* **Giovanni Morelli** - Architettura logica, sviluppo JavaScript e implementazione Vue.js.
+* **Jonathan Crescentini** - Design dell'interfaccia, sviluppo CSS e mockup strutturali.
+
+---
+*Corso di Sistemi Web | CdL Tecnologie dei Sistemi Informatici | Università di Bologna | A.A. 2024-2025*

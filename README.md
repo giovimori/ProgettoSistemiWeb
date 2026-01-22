@@ -31,7 +31,7 @@ L'architettura "No-Build" del progetto permette un'esecuzione immediata senza ne
 
 1.  **Clonazione del repository:**
     ```bash
-    git clone [https://github.com/giovimori/ProgettoSistemiWeb.git](https://github.com/giovimori/ProgettoSistemiWeb.git)
+    git clone https://github.com/giovimori/WebSocket-Explorer.git
     ```
 
 2.  **Esecuzione dell'applicazione:**
